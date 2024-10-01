@@ -56,7 +56,7 @@ for file in files:
     if directory != "":
         if not os.path.exists(directory):
             os.makedirs(directory)
-            logger.warning(f"New directory {directory} inserted")
+            logger.warning(f"\nNew directory {directory} inserted")
 
     if not os.path.exists(file):
         with open(file, 'w') as f:

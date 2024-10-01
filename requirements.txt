@@ -7,3 +7,5 @@ scipy
 setuptools
 openpyxl
 ipykernel
+matplotlib
+seaborn

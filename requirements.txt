@@ -9,3 +9,4 @@ openpyxl
 ipykernel
 matplotlib
 seaborn
+pytest

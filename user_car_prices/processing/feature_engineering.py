@@ -15,6 +15,7 @@ class AddNewFeatures(BaseEstimator, TransformerMixin):
 
         X['HP'] = pd.to_numeric(X['HP'], errors='coerce')
         X['litres'] = pd.to_numeric(X['litres'], errors='coerce')
+        print("New features added!")
         return X
 
 

@@ -31,8 +31,11 @@ class EncodingFeatures(BaseEstimator, TransformerMixin):
         for feature in self.features_to_encode:
             X[feature] = le.fit_transform(X[feature])
 
+        print(X.columns)
         X.drop(columns=self.features_to_drop, inplace=True)
         X.rename(columns={'brand_encoded': 'brand', 'model_encoded': 'model'}, inplace=True)
+        print("Features encoded!")
+        print(X.columns)
         return X
 
 class ScalingFeatures(BaseEstimator, TransformerMixin):
@@ -44,6 +47,7 @@ class ScalingFeatures(BaseEstimator, TransformerMixin):
     
     def transform(self, X, y=None):
         X[self.features_to_scale] = ss.fit_transform(X[self.features_to_scale])
+        print("Feature scaled!")
         return X
     
 # def encoding_features(df):

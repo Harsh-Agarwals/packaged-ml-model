@@ -14,6 +14,7 @@ class OutlierRemoval(BaseEstimator, TransformerMixin):
         for i, variable in enumerate(self.outlier_variables):
             if variable in X.columns:
                 X.loc[(X[variable] <= self.variable_range[i][0]) | (X[variable] >= self.variable_range[i][1]), variable] = np.nan
+        print("Outlier removed!")
         return X
 
 # def remove_outlier(df):

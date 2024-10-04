@@ -1,0 +1,12 @@
+python-dotenv
+pandas
+numpy
+joblib
+scikit-learn
+scipy
+setuptools
+openpyxl
+ipykernel
+matplotlib
+seaborn
+pytest

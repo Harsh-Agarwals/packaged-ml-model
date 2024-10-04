@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: car-prices-model
+Version: 1.0.0
+Summary: ML model package for prediction of Car Prices
+Home-page: https://github.com/Harsh-Agarwals/packaged-ml-model
+Author: Harsh Agarwal
+Author-email: harshag.code@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7.0
+Requires-Dist: python-dotenv
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: joblib
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: setuptools
+Requires-Dist: openpyxl
+Requires-Dist: ipykernel
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: pytest

@@ -8,7 +8,7 @@ warnings.filterwarnings('ignore')
 # Metadata
 NAME='car-prices-model'
 DESCRIPTION='ML model package for prediction of Car Prices'
-URL='https://github.com/Harsh-Agarwals/MLops/tree/main/Packaging-ML-Model'
+URL='https://github.com/Harsh-Agarwals/packaged-ml-model'
 EMAIL='harshag.code@gmail.com'
 AUTHOR='Harsh Agarwal'
 REQUIRES_PYTHON='>=3.7.0'

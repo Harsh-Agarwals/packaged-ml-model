@@ -4,7 +4,7 @@ venv/
 .ipynb_checkpoints/
 
 logs/
-user_car_prices/datasets/
+# user_car_prices/datasets/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

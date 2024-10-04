@@ -10,3 +10,7 @@ ipykernel
 matplotlib
 seaborn
 pytest
+Flask
+fastapi
+uvicorn
+streamlit

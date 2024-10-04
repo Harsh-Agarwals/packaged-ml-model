@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Car Prices Predictions</title>
+    <meta name="author" content="Harsh Agarwal">
+    <meta name="description" content="Application for user car prices prediction using Machine Learning" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+     <!-- <link rel="stylesheet" href="../static/styles.css"> -->
+</head>
+<body>
+
+    <div class="content">
+        <h1>Car Prices predictions</h1>
+        <p>Fill in the required properties to get the predicted Car Prices.</p>
+
+        <form action="/car-prices-prediction" method="post">
+            <div>
+                <label for="brand">Brand <span title="required">*</span></label>
+                <input type="text" name="brand" id="brand" required>
+            </div>
+            <div>
+                <label for="model">Model <span title="required">*</span></label>
+                <input type="text" name="model" id="model" required>
+            </div>
+            <div>
+                <label for="model_year">Model Year <span title="required">*</span></label>
+                <input type="number" name="model_year" id="model_year" min=1972, max=2024 required>
+            </div>
+            <div>
+                <label for="milage">Mileage <span title="required">*</span></label>
+                <input type="number" name="milage" id="milage" required>
+            </div>
+            <div>
+                <label for="fuel_type">Fuel Type</label>
+                <select name="fuel_type" id="fuel_type">
+                    <option value="Gasoline">Gasoline</option>
+                    <option value="Hybrid">Hybrid</option>
+                    <option value="E85 Flex Fuel">E85 Flex Fuel</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Plug-In Hybrid">Plug-In Hybrid</option>
+                    <option value="not supported">not supported</option>
+                </select>
+            </div>
+            <div>
+                <label for="engine">Engine <span title="required">*</span></label>
+                <input type="text" name="engine" id="engine" required>
+            </div>
+            <div>
+                <label for="transmission">Transmission <span title="required">*</span></label>
+                <input type="text" name="transmission" id="transmission" required>
+            </div>
+            <div>
+                <label for="ext_col">External Color <span title="required">*</span></label>
+                <input type="text" name="ext_col" id="ext_col" required>
+            </div>
+            <div>
+                <label for="int_col">Internal Color <span title="required">*</span></label>
+                <input type="text" name="int_col" id="int_col" required>
+            </div>
+            <div>
+                <p>Accident</p>
+                <input type="radio" name="accident" id="none" value="None reported">
+                <label for="none">None reported</label>
+                <input type="radio" name="accident" id="atleast_one" value="At least 1 accident or damage reported">
+                <label for="atleast_one">At least 1 accident or damage reported</label>
+            </div>
+            <div>
+                <p>Clean Title</p>
+                <input type="radio" name="clean_title" id="yes" value="Yes">
+                <label for="yes">Yes</label>
+                <input type="radio" name="clean_title" id="no" value="No">
+                <label for="no">No</label>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+</body>
+</html>

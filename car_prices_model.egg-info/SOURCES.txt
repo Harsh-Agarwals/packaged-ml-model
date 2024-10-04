@@ -1,6 +1,5 @@
 MANIFEST.in
 README.md
-app.py
 requirements.txt
 setup.py
 template.py
@@ -9,6 +8,12 @@ car_prices_model.egg-info/SOURCES.txt
 car_prices_model.egg-info/dependency_links.txt
 car_prices_model.egg-info/requires.txt
 car_prices_model.egg-info/top_level.txt
+fastapi_app/__init__.py
+fastapi_app/main.py
+flask_app/__init__.py
+flask_app/main.py
+streamlit_app/__init__.py
+streamlit_app/main.py
 tests/test_prediction.py
 user_car_prices/VERSION
 user_car_prices/__init__.py

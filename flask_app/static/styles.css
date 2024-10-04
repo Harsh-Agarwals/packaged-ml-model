@@ -1,0 +1,36 @@
+.content {
+    width: 600px;
+    margin: 3rem auto;
+}
+
+.content h1 {
+    color: green;
+}
+
+.content form {
+    border-left: 1px solid black;
+}
+
+.content form div {
+    margin: 1rem 2rem;
+}
+
+.content form span {
+    color: rgb(255, 85, 85);
+}
+
+.content input[type="submit"] {
+    padding: 8px 1rem;
+    margin-left: 1rem;
+    font-weight: bolder;
+    background-color: green;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.content input[type="submit"]:hover {
+    background-color: rgb(3, 143, 3);
+}

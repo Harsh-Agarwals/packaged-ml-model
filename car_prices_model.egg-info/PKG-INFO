@@ -25,3 +25,7 @@ Requires-Dist: ipykernel
 Requires-Dist: matplotlib
 Requires-Dist: seaborn
 Requires-Dist: pytest
+Requires-Dist: Flask
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: streamlit

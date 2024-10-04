@@ -18,12 +18,12 @@ from user_car_prices.processing import data_handling
 model_pipeline = data_handling.load_pipeline()
 
 def create_predictions(df):
-    if df.shape[0] == 1:
-        data = pd.DataFrame(df).T
-    else:
-        data = pd.DataFrame(df)
+    data = pd.DataFrame(df)
     print(data)
-    preds = model_pipeline.predict(data[config.MODEL_FEATURES])
+    if data.T.shape[0]==1:
+        preds = model_pipeline.predict(data.T[config.MODEL_FEATURES])
+    else:
+        preds = model_pipeline.predict(data[config.MODEL_FEATURES])
     print(f"Predictions: {preds}")
     return preds
 
@@ -45,7 +45,7 @@ def get_one_row():
     n = test.shape[0]
     index = random.choice(range(n))
     df = test.iloc[index, :]
-    return df
+    return pd.DataFrame(df)
 
 if __name__=="__main__":
     # Test set predictions

@@ -20,6 +20,8 @@ model_pipeline = data_handling.load_pipeline()
 def create_predictions(df):
     if df.shape[0] == 1:
         data = pd.DataFrame(df).T
+    else:
+        data = pd.DataFrame(df)
     print(data)
     preds = model_pipeline.predict(data[config.MODEL_FEATURES])
     print(f"Predictions: {preds}")

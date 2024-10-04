@@ -18,7 +18,8 @@ from user_car_prices.processing import data_handling
 model_pipeline = data_handling.load_pipeline()
 
 def create_predictions(df):
-    data = pd.DataFrame(df).T
+    if df.shape[0] == 1:
+        data = pd.DataFrame(df).T
     print(data)
     preds = model_pipeline.predict(data[config.MODEL_FEATURES])
     print(f"Predictions: {preds}")

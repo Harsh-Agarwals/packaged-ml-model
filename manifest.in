@@ -1,0 +1,12 @@
+include *.txt
+include *.md
+include *.py
+
+recursive-include ./user_car_prices/*
+include ./user_car_prices/trained_models/*.pkl
+include ./user_car_prices/datasets/*.csv
+include ./texts/*
+include ./user_car_prices/VERSION
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

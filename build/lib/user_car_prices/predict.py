@@ -21,13 +21,19 @@ def create_predictions(df):
     data = pd.DataFrame(df)
     print(data)
     if data.T.shape[0]==1:
-        rows = get_few_rows()
+        rows = get_train_rows()
         data = pd.concat([rows, data.T], axis=0, ignore_index=True)
         data.reset_index(drop=True, inplace=True)
-        print(data)
+        preds = model_pipeline.predict(data[config.MODEL_FEATURES])
+        preds = preds[3]
+    elif data.shape[0]==1:
+        rows = get_train_rows()
+        data = pd.concat([rows, data], axis=0, ignore_index=True)
+        data.reset_index(drop=True, inplace=True)
         preds = model_pipeline.predict(data[config.MODEL_FEATURES])
         preds = preds[3]
     else:
+        print('here')
         preds = model_pipeline.predict(data[config.MODEL_FEATURES])
     print(f"Predictions: {preds}")
     return preds
@@ -37,6 +43,13 @@ def generate_predictions():
     predictions = model_pipeline.predict(test[config.MODEL_FEATURES])
     print(predictions)
     return predictions
+
+def get_train_rows():
+    test = data_handling.load_dataset(config.TRAIN_FILE)
+    n = test.shape[0]
+    indexes = random.sample(range(n), 3)
+    df = test.iloc[indexes, :]
+    return df
 
 def get_few_rows():
     test = data_handling.load_dataset(config.TEST_FILE)

@@ -23,7 +23,7 @@ def home():
         data['model_year'] = data['model_year'].astype('int32')
         data['milage'] = data['milage'].astype('int32')
         prediction = create_predictions(data)
-        return redirect(url_for('dashboard', prediction=f"{prediction[3]:.2f}"))
+        return redirect(url_for('dashboard', prediction=f"{prediction:.2f}"))
     return render_template("index.html")
 
 @app.route('/dashboard')

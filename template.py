@@ -1,27 +1,31 @@
 import os
-import logging
+# import logging
 from datetime import datetime
 from pathlib import Path
+import sys
 
-today = datetime.now()
-logging_path = os.path.join(os.path.dirname("."), "logs")
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs'))
+from logging_file import logger
 
-if os.path.exists(logging_path):
-    print("Logging path exists")
-    logging.basicConfig(filename=os.path.join(logging_path, f"log_{today.strftime("%d%m%Y")}.log"), filemode='w', format='%(message)s', force=True)
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
-    logger.warning("==============LOGGER START==============")
-    logger.info(f"Current time: {today}")
-    logger.warning("-----------------------------\n\n")
-else:
-    os.makedirs("logs")
-    logging.basicConfig(filename=os.path.join(logging_path, f"log_{today.strftime("%d%m%Y")}.log"), filemode='w', format='%(message)s', force=True)
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
-    logger.warning("==============LOGGER START==============")
-    logger.info(f"Current time: {today}")
-    logger.warning("-----------------------------\n\n")
+# today = datetime.now()
+# logging_path = os.path.join(os.path.dirname("."), "logs")
+
+# if os.path.exists(logging_path):
+#     print("Logging path exists")
+#     logging.basicConfig(filename=os.path.join(logging_path, f"log_{today.strftime("%d%m%Y")}.log"), filemode='w', format='%(message)s', force=True)
+#     logger = logging.getLogger()
+#     logger.setLevel(logging.DEBUG)
+#     logger.warning("==============LOGGER START==============")
+#     logger.info(f"Current time: {today}")
+#     logger.warning("-----------------------------\n\n")
+# else:
+#     os.makedirs("logs")
+#     logging.basicConfig(filename=os.path.join(logging_path, f"log_{today.strftime("%d%m%Y")}.log"), filemode='w', format='%(message)s', force=True)
+#     logger = logging.getLogger()
+#     logger.setLevel(logging.DEBUG)
+#     logger.warning("==============LOGGER START==============")
+#     logger.info(f"Current time: {today}")
+#     logger.warning("-----------------------------\n\n")
 
 project_path = "user_car_prices"
 

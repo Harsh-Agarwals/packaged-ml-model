@@ -22,7 +22,7 @@ model_pipeline = data_handling.load_pipeline()
 
 def create_predictions(df):
     data = pd.DataFrame(df)
-    # logger.info(data)
+    logger.info(data)
     print(data)
     if data.T.shape[0]==1:
         rows = get_train_rows()
@@ -45,8 +45,8 @@ def generate_predictions():
     test = data_handling.load_dataset(config.TEST_FILE)
     predictions = model_pipeline.predict(test[config.MODEL_FEATURES])
     print(predictions)
-    # logger.info("\nPredictions")
-    # logger.info(predictions)
+    logger.info("\nPredictions")
+    logger.info(predictions)
     return predictions
 
 def get_train_rows():
@@ -54,8 +54,8 @@ def get_train_rows():
     n = test.shape[0]
     indexes = random.sample(range(n), 3)
     df = test.iloc[indexes, :]
-    # logger.warning("\nTraining Rows:")
-    # logger.warning(df)
+    logger.warning("\nTraining Rows:")
+    logger.warning(df)
     return df
 
 def get_few_rows():
@@ -63,8 +63,8 @@ def get_few_rows():
     n = test.shape[0]
     indexes = random.sample(range(n), 3)
     df = test.iloc[indexes, :]
-    # logger.warning("\nFew Rows:")
-    # logger.warning(df)
+    logger.warning("\nFew Rows:")
+    logger.warning(df)
     return df
 
 def get_one_row():
@@ -72,8 +72,8 @@ def get_one_row():
     n = test.shape[0]
     index = random.choice(range(n))
     df = test.iloc[index, :]
-    # logger.warning("\nOne Row:")
-    # logger.warning(df)
+    logger.warning("\nOne Row:")
+    logger.warning(df)
     return pd.DataFrame(df)
 
 if __name__=="__main__":

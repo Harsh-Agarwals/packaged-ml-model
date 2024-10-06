@@ -8,7 +8,7 @@ from pathlib import Path
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs'))
 from logging_file import logger
 
-# This makes sure our package is found
+# This makes sure our package is found okay
 PACKAGE_ROOT = Path(os.path.abspath(os.path.dirname(__file__))).parent
 sys.path.append(str(PACKAGE_ROOT))
 
